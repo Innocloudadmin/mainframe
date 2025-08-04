@@ -1,23 +1,23 @@
 # fly.toml file for n8n
-app = "mainframe"
+app = "mainframe-qpny-g"
 primary_region = "iad"
 
 [build]
   dockerfile = "Dockerfile"
 
 [env]
-  N8N_HOST = "mainframe.fly.dev"
-  N8N_PORT = "5678"
+  N8N_HOST     = "mainframe-qpny-g.fly.dev"
+  N8N_PORT     = "5678"
   N8N_PROTOCOL = "https"
-  WEBHOOK_URL = "https://mainframe.fly.dev"
+  WEBHOOK_URL  = "https://mainframe-qpny-g.fly.dev"
 
 [http_service]
-  internal_port = 5678
-  force_https = true
-  auto_stop_machines = true
+  internal_port       = 5678
+  force_https         = true
+  auto_stop_machines  = true
   auto_start_machines = true
   min_machines_running = 0
 
 [[mounts]]
-  source = "n8n_data"
+  source      = "n8n_data"
   destination = "/home/node/.n8n"
