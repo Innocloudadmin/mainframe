@@ -18,3 +18,7 @@ PORT = 5678
 [[mounts]]
   source      = "n8n_data"
   destination = "/home/node/.n8n"
+  
+  [[statics]]
+  guest_path = "/app/public"
+  url_prefix = "/"
