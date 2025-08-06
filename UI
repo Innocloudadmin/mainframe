@@ -1,0 +1,36 @@
+{
+  "title": "Appliance Part Lookup",
+  "description": "Enter the manufacturing part number or customer part number to triage an appliance issue.",
+  "fields": [
+    {
+      "name": "manufacturingPartNumber",
+      "label": "Manufacturing Part Number",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g. WED4815EW1"
+    },
+    {
+      "name": "customerPartNumber",
+      "label": "Customer Part Number",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g. 279838"
+    }
+  ],
+  "submit": {
+    "label": "Lookup",
+    "method": "POST",
+    "url": "https://<your-n8n-domain>/webhook/parts-lookup",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "manufacturingPartNumber": "{{manufacturingPartNumber}}",
+      "customerPartNumber": "{{customerPartNumber}}"
+    }
+  },
+  "result": {
+    "format": "json",
+    "display": "textarea"
+  }
+}
