@@ -20,5 +20,5 @@ PORT = 5678
   destination = "/home/node/.n8n"
   
 [[statics]]
-  guest_path = "/app/ui"
+  guest_path = "/app/UI"
   url_prefix = "/"
