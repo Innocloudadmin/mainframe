@@ -19,6 +19,6 @@ PORT = 5678
   source      = "n8n_data"
   destination = "/home/node/.n8n"
   
-  [[statics]]
-  guest_path = "/app/public"
+[[statics]]
+  guest_path = "/app/ui"
   url_prefix = "/"
